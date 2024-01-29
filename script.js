@@ -26,6 +26,9 @@ createApp({
                 this.todoInput = '';
                 this.todoList = response.data;
             })
+        },
+        removeCard(index){
+            this.todoList.splice(index, 1);
         }
     }
 }).mount('#app')
