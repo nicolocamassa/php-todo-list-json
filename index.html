@@ -3,11 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js" integrity="sha512-NQfB/bDaB8kaSXF8E77JjhHG5PM6XVRxvHzkZiwl3ddWCEPBa23T76MuWSwAJdMGJnmQqM0VeY9kFszsrBEFrQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>TO-DO LIST</title>
 </head>
 <body>
     <div id="app">
-        
+
+        <div v-for="(todo, index) in todoList" :key="index">{{ todo }}</div>
+
+    <!--TODO: 
+        INDEX:
+        VERRANNO VISUALIZZATI QUI I DATI
+        1. FACCIAMO IL V-FOR DELLA TO-DO LIST PRESENTE IN SCRIPT
+    
+        SERVER.PHP:
+        1. PRENDIAMO IL CONTENUTO DEL FILE .JSON
+        2. PASSIAMO IL JSON TRAMITE UN HEADER (content-type: application/json)
+        3. INVIO DELL'INFORMAZIONE TRAMITE UN ECHO
+    
+        SCRIPT.JS
+        1. PRENDIAMO L'API (PERCORSO SERVER)
+        2. FACCIAMO LA CHIAMATA AXIOS
+    -->
     </div>
+
+    <script src="./script.js"></script>
 </body>
 </html>
